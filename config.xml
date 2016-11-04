@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
+        id        = "com.phonegap.CrandoApp"
         version   = "1.0.0">
 
     <name>CreandoApp</name>
@@ -16,7 +16,8 @@
         CreandoApp Team
     </author>
  
-
+    <preference name="EnableViewportScale" value="true"/>
+        
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
@@ -96,5 +97,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
+    
 </widget>
