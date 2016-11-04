@@ -46,6 +46,62 @@ var app = {
 
         console.log('Received Event: ' + id);
         
-        navigator.vibrate(300);
+         
     }
 };
+
+
+function notificationAlert(){
+    navigator.notification.alert(
+        'Eres un ganador!',  // mesare
+        alertDismissed,      // callback
+        'Final del juego',   // title
+        'Ok'                 // buttonName
+    );
+}
+
+function alertDismissed() {
+    // do something
+    console.log('Has pulsado Ok');
+}
+
+//Dialog -> notificationConfirm
+function notificationConfirm(){
+    navigator.notification.confirm(
+        'Eres un ganador!',     // message
+        onConfirm,              // callback
+        'Final del juego',      // title
+        ['Reiniciar','Salir']   // buttonName
+    );
+}
+
+function onConfirm (buttonIndex) {
+    // do something
+    if(buttonIndex == 1)
+        console.log('Has pulsado Reiniciar');
+    if(buttonIndex == 2)
+        console.log('Has pulsado Salir');
+}
+
+//Dialog -> notificationConfirm
+function notificationPrompt(){
+    navigator.notification.prompt(
+        'Por favor introduce tu nombre.',   // message
+        onPrompt,                           // callback to invoke
+        'Bienvenido',                       // title
+        ['Guardar','Cancelar'],             // buttonLabels
+        ''                                  // defaultText
+    );
+}
+
+function onPrompt(results) {
+    if(results.buttonIndex == 1)
+        console.log("Has pulsado Guardar y te llamas " + results.input1);
+    if(results.buttonIndex == 2)
+        console.log("Has pulsado Cancelar y te llamas " + results.input1);
+}
+
+//Dialog -> notificationBeep
+function notificationBeep(){
+    navigator.notification.beep(2);
+}
