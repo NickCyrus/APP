@@ -2,3 +2,8 @@ body{
     background: #00B22D;
     color:#FFF;
 }
+
+
+.ele-center{
+    margin: 35% auto;
+}
