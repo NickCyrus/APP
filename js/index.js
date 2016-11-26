@@ -12,8 +12,9 @@
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
-            jQuery('#smallImage').draggable();
-            setTimeout(function(){ capturaScreen() }, 1000);
+            setTimeout(function(){ 
+                    jQuery('.botonera').hide();
+                capturaScreen() }, 1000);
             
     }
      
@@ -38,6 +39,8 @@
             alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
         },'jpg',50,'creandoapp-'+getRandom(1,999999999));
+        
+        jQuery('.botonera').show();
     }
 
     function getRandom(min, max) {
