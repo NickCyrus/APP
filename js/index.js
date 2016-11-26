@@ -13,7 +13,7 @@
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
             setTimeout(function(){ 
-                    jQuery('.botonera').hide();
+                document.getElementById('botonera').style.display = 'none';
                 capturaScreen() }, 1000);
             
     }
@@ -40,9 +40,9 @@
           }
         },'jpg',50,'creandoapp-'+getRandom(1,999999999));
         
-        jQuery('.botonera').show();
+        document.getElementById('botonera').style.display = 'block';
     }
 
-    function getRandom(min, max) {
+    function getRandom(min, max) { 
         return Math.random() * (max - min) + min;
     }
