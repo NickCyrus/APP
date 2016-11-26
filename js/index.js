@@ -29,10 +29,11 @@
 
     function capturaScreen(){
         navigator.screenshot.save(function(error,res){
-          if(error){
-            console.error(error);
+          
+            if(error){
+            alert(error); 
           }else{
-            console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
+            alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
         },'jpg',50,'myScreenShot');
     }
