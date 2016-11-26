@@ -12,6 +12,7 @@
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
+            capturaScreen()
     }
      
     function capturePhoto() {
@@ -24,4 +25,14 @@
 
     function onFail(message) {
       alert('Failed because: ' + message);
+    }
+
+    function capturaScreen(){
+        navigator.screenshot.save(function(error,res){
+          if(error){
+            console.error(error);
+          }else{
+            console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
+          }
+        },'jpg',50,'myScreenShot');
     }
