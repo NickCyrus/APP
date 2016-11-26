@@ -12,7 +12,9 @@
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
-            capturaScreen()
+        
+            setTimeout(function(){ capturaScreen() }, 1000);
+            
     }
      
     function capturePhoto() {
@@ -35,5 +37,9 @@
           }else{
             alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
-        },'jpg',50,'myScreenShot');
+        },'jpg',50,'creandoapp-'+getRandom(1,999999999));
+    }
+
+    function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
     }
