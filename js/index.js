@@ -10,9 +10,10 @@
 
     function onPhotoDataSuccess(imageURI) { 
             var imgProfile = document.getElementById('smallImage');
+            imgProfile.style.display = 'block';
             imgProfile.src = imageURI;
     }
-    
+     
     function capturePhoto() {
         navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL });
     }
