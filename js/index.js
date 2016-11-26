@@ -8,13 +8,14 @@ var App = {
             },
             
             bindEvents : function(){
-                 var takePhoto = $('#'+this.btnTakePhoto);
-                 takePhoto.click(this.takePhoto);
-                 
+                 var takePhoto = document.getElementById(this.btnTakePhoto);
+                 alert(takePhoto);
+                 takePhoto.addEventListener('click', this.takePhoto, false);
+                 var sendPhoto = document.getElementById(this.btnTakePhoto);
+                 sendPhoto.addEventListener('click', this.sendPhoto, false);
             },
     
             takePhoto: function(){
-              alert('A');
               navigator.camera.getPicture(App.onPhotoDataSuccess, App.onFail, { quality: 20, allowEdit: true, destinationType:navigator.camera.DestinationType.DATA_URL });
             },
     
@@ -39,4 +40,3 @@ var App = {
     
 }
 
-App.init();
