@@ -11,7 +11,7 @@
     function onPhotoDataSuccess(imageURI) { 
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
-            imgProfile.src = imageURI;
+            imgProfile.src = "data:image/jpeg;base64,"+imageURI;
     }
      
     function capturePhoto() {
