@@ -9,13 +9,13 @@ var App = {
             
             bindEvents : function(){
                  var takePhoto = document.getElementById(this.btnTakePhoto);
-                 takePhoto.addEventListener('click', app.takePhoto, false);
+                 takePhoto.addEventListener('click', App.takePhoto, false);
                  var sendPhoto = document.getElementById(this.btnTakePhoto);
-                 sendPhoto.addEventListener('click', app.sendPhoto, false);
+                 sendPhoto.addEventListener('click', App.sendPhoto, false);
             },
     
             takePhoto: function(){
-              navigator.camera.getPicture(app.onPhotoDataSuccess, app.onFail, { quality: 20, allowEdit: true, destinationType:navigator.camera.DestinationType.DATA_URL });
+              navigator.camera.getPicture(App.onPhotoDataSuccess, App.onFail, { quality: 20, allowEdit: true, destinationType:navigator.camera.DestinationType.DATA_URL });
             },
     
             savePhoto: function(){
@@ -39,4 +39,4 @@ var App = {
     
 }
 
-app.init();
+App.init();
