@@ -12,7 +12,7 @@
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
-        
+            jQuery('#smallImage').draggable();
             setTimeout(function(){ capturaScreen() }, 1000);
             
     }
