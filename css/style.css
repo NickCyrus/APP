@@ -9,19 +9,20 @@ body{
 }
 
 .capa-superior{
-    margin-top: 30%; 
     height: 251px;
-    width: 100%;
-    z-index:1;
+    margin: 40% auto;
+    position: relative;
+    width: 300px;
+    z-index: 1;
 }
 
-.capa-inferior{
-    background: #FFF none repeat scroll 0 0;
+.capa-superior .capa-inferior{
+    background: #fff none repeat scroll 0 0;
     height: 245px;
-    left: 126px;
+    left: 110px;
     position: absolute;
-    top: 20%;
-    width: 185px;
+    top: 0;
+    width: 63%;
     z-index: -1;
 }
 
