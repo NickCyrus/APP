@@ -11,7 +11,6 @@
     function onPhotoDataSuccess(imageURI) { 
             var imgProfile = document.getElementById('smallImage');
             imgProfile.src = imageURI;
-            movePic(imageURI);
     }
     
     function capturePhoto() {
