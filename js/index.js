@@ -33,10 +33,10 @@
     function capturaScreen(){
         navigator.screenshot.save(function(error,res){
           
-            if(error){
+          if(error){
             alert(error); 
           }else{
-            alert(res.filePath); //should be path/to/myScreenshot.jpg
+            // alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
         },'jpg',50,'creandoapp-'+getRandom(1,999999999));
         
