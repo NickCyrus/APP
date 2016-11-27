@@ -36,11 +36,12 @@
 
     function capturaScreen(){
         var nameField = 'creandoapp-'+getRandom(1,999999999);
-        navigator.screenshot.save(function(error,res){
-          
+        navigator.screenshot.URI(function(error,res){
+        // navigator.screenshot.save(function(error,res){  
           if(error){ 
             alert(error); 
           }else{
+              strImgBase64 =  res.URI
               var shareBtn = '<button onclick="window.plugins.socialsharing.share(\'Feliz navidad\', \'Esta es tu foto de navidad\', \''+strImgBase64+'\', null)">Compartir</button>';
               
               document.getElementById('botonera').innerHTML = shareBtn;
