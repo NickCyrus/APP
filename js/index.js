@@ -34,15 +34,19 @@
     }
 
     function capturaScreen(){
+        var nameField = 'creandoapp-'+getRandom(1,999999999);
         navigator.screenshot.save(function(error,res){
           
           if(error){ 
             alert(error); 
           }else{
-            document.getElementById('botonera').style.display = 'block';
-             // alert(res.filePath); //should be path/to/myScreenshot.jpg
+              var shareBtn = '<button onclick="window.plugins.socialsharing.share(\'Feliz navidad\', \'Esta es tu foto de navidad\', \''+nameField+'.jpg\')">Compartir</button>';
+              
+              document.getElementById('botonera').innerHTML = shareBtn;
+              document.getElementById('botonera').style.display = 'block';
+              
           }
-        },'jpg',100,'creandoapp-'+getRandom(1,999999999));
+        },'jpg',100,nameField);
         
         
     }
