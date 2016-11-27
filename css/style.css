@@ -22,7 +22,7 @@ body{
     height: 245px;
     left: 110px;
     position: absolute;
-    top: 0;
+    top: 55px;
     width: 63%;
     z-index: -1;
     overflow: hidden !important;
