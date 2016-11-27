@@ -1,5 +1,7 @@
 body{
-    background: #9ecb2d; /* Old browsers */
+    background: url('../images/bg.jpg') bottom center no-repeat #051127;
+    background-size: 100%;
+     
 }
 
 
