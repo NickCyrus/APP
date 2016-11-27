@@ -36,14 +36,15 @@
     function capturaScreen(){
         navigator.screenshot.save(function(error,res){
           
-          if(error){
+          if(error){ 
             alert(error); 
           }else{
-            // alert(res.filePath); //should be path/to/myScreenshot.jpg
+            document.getElementById('botonera').style.display = 'block';
+             // alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
         },'jpg',100,'creandoapp-'+getRandom(1,999999999));
         
-        document.getElementById('botonera').style.display = 'block';
+        
     }
 
     function getRandom(min, max) { 
