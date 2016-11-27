@@ -47,13 +47,12 @@ body{
 }
 
 .botonera #btnShared{
-          background: #FFFF url("../images/share.png") no-repeat scroll center center / 50% auto;
+          background: rgba(0, 0, 0, 0) url("../images/share.png") no-repeat scroll center center / 50% auto;
           border: medium none;
           display: inline-block;
           height: 64px;
           margin: 0 auto;
           width: 64px;
           text-indent: -9999px;
-          border-radius: 50px;
 }
 

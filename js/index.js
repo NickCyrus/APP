@@ -42,7 +42,7 @@
             alert(error); 
           }else{
               strImgBase64 =  res.URI
-              var shareBtn = '<button onclick="capturePhoto();" id="btnCapture">Capture Photo</button><button id="btnShared" onclick="window.plugins.socialsharing.share(\'Feliz navidad\', \'Esta es tu foto de navidad\', \''+strImgBase64+'\', null)">Compartir</button>';
+              var shareBtn = '<button onclick="capturePhoto();" id="btnCapture">Capture Photo</button><button id="btnShared" onclick="window.plugins.socialsharing.share(\'CreandoApp - Feliz navidad\', \'Esta es tu foto de navidad\', \''+strImgBase64+'\', null)">Compartir</button>';
               
               document.getElementById('botonera').innerHTML = shareBtn;
               document.getElementById('botonera').style.display = 'block';
