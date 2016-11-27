@@ -7,14 +7,7 @@
     function onDeviceReady() {
         pictureSource   = navigator.camera.PictureSourceType;
         destinationType = navigator.camera.DestinationType;
-        
-        var tapEnabled = true; //enable tap take picture
-        var dragEnabled = true; //enable preview box drag across the screen
-        var toBack = true; //send preview box to the back of the webview
-        var rect = {x: 100, y: 100, width: 200, height:200};
-        cordova.plugins.camerapreview.startCamera(rect, "front", tapEnabled, dragEnabled, toBack)
-
-    
+   
     }
 
     function onPhotoDataSuccess(imageURI) { 
@@ -48,7 +41,7 @@
           }else{
             // alert(res.filePath); //should be path/to/myScreenshot.jpg
           }
-        },'jpg',50,'creandoapp-'+getRandom(1,999999999));
+        },'jpg',100,'creandoapp-'+getRandom(1,999999999));
         
         document.getElementById('botonera').style.display = 'block';
     }
