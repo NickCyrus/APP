@@ -37,11 +37,23 @@ body{
 }
 
 .botonera #btnCapture{
-        background: url('../images/btn-capture.png') top center no-repeat;
-        width: 56px;
-        height: 56px;
-        border: none;
-        margin: 0px auto;
-        display: block;
-        text-indent: -99999999999px;
+          background: rgba(0, 0, 0, 0) url("../images/btn-capture.png") no-repeat scroll center top / 100% auto;
+          border: medium none;
+          display: inline-block;
+          height: 64px;
+          margin: 0 auto;
+          width: 64px;
+          text-indent: -9999px;
 }
+
+.botonera #btnShared{
+          background: #FFFF url("../images/share.png") no-repeat scroll center center / 50% auto;
+          border: medium none;
+          display: inline-block;
+          height: 64px;
+          margin: 0 auto;
+          width: 64px;
+          text-indent: -9999px;
+          border-radius: 50px;
+}
+
