@@ -1,6 +1,7 @@
     var pictureSource;    
     var destinationType;
-
+    var strImgBase64
+    
     document.addEventListener("deviceready",onDeviceReady,false);
     
     
@@ -14,8 +15,8 @@
             var imgProfile = document.getElementById('smallImage');
             imgProfile.style.display = 'block';
             imgProfile.src = "data:image/jpeg;base64,"+imageURI;
-                
-        setTimeout(capturaScreen, 1000);
+            strImgBase64   = "data:image/jpeg;base64,"+imageURI;
+            setTimeout(capturaScreen, 1000);
             
     }
      
@@ -40,7 +41,7 @@
           if(error){ 
             alert(error); 
           }else{
-              var shareBtn = '<button onclick="window.plugins.socialsharing.share(\'Feliz navidad\', \'Esta es tu foto de navidad\', \''+nameField+'.jpg\')">Compartir</button>';
+              var shareBtn = '<button onclick="window.plugins.socialsharing.share(\'Feliz navidad\', \'Esta es tu foto de navidad\', \''+strImgBase64+'\', null)">Compartir</button>';
               
               document.getElementById('botonera').innerHTML = shareBtn;
               document.getElementById('botonera').style.display = 'block';
